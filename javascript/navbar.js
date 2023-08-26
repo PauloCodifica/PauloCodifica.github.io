@@ -25,15 +25,16 @@ closeBtn.addEventListener("click", () => {
 //Función del botón para colocar idioma en español.
 var prefLenguaje = localStorage.getItem("LanguagePref");
 const currentPage = window.location.pathname.split("/").pop();
+console.log("currentPage: " + currentPage);
 
 document.getElementById("LangSetSpanishButton").onclick = function() {
   //Guardar preferencia de idioma.
   if (typeof(Storage) !== "undefined") { localStorage.setItem("LanguagePref", "Spanish"); }
-  if(currentPage === "index.html")
+  if(currentPage === "index")
   {
     location.href = "../es/";
   } else {
-    location.href = "../es/" + currentPage.slice(0, -5);
+    location.href = "../es/" + currentPage;
   }
   return false;
 }
@@ -41,11 +42,11 @@ document.getElementById("LangSetSpanishButton").onclick = function() {
 document.getElementById("LangSetEnglishButton").onclick = function() {
   //Guardar preferencia de idioma.
   if (typeof(Storage) !== "undefined") { localStorage.setItem("LanguagePref", "English"); }
-  if(currentPage === "index.html")
+  if(currentPage === "index")
   {
     location.href = "../en/";
   } else {
-    location.href = "../en/" + currentPage.slice(0, -5);
+    location.href = "../en/" + currentPage;
   }
   return false;
 }
