@@ -29,14 +29,24 @@ const currentPage = window.location.pathname.split("/").pop();
 document.getElementById("LangSetSpanishButton").onclick = function() {
   //Guardar preferencia de idioma.
   if (typeof(Storage) !== "undefined") { localStorage.setItem("LanguagePref", "Spanish"); }
-    location.href = "../es/" + currentPage;
+  if(currentPage === "index.html")
+  {
+    location.href = "../es/";
+  } else {
+    location.href = "../es/" + currentPage.slice(0, -5);
+  }
   return false;
 }
 //Función del botón para colocar idioma en inglés.
 document.getElementById("LangSetEnglishButton").onclick = function() {
   //Guardar preferencia de idioma.
   if (typeof(Storage) !== "undefined") { localStorage.setItem("LanguagePref", "English"); }
-    location.href = "../en/" + currentPage;
+  if(currentPage === "index.html")
+  {
+    location.href = "../en/";
+  } else {
+    location.href = "../en/" + currentPage.slice(0, -5);
+  }
   return false;
 }
 
