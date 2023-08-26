@@ -25,29 +25,18 @@ closeBtn.addEventListener("click", () => {
 //Función del botón para colocar idioma en español.
 var prefLenguaje = localStorage.getItem("LanguagePref");
 const currentPage = window.location.pathname.split("/").pop();
-console.log("currentPage: " + currentPage);
 
 document.getElementById("LangSetSpanishButton").onclick = function() {
   //Guardar preferencia de idioma.
   if (typeof(Storage) !== "undefined") { localStorage.setItem("LanguagePref", "Spanish"); }
-  if(currentPage === "index")
-  {
-    location.href = "../es/";
-  } else {
-    location.href = "../es/" + currentPage;
-  }
+  location.href = "../es/" + currentPage;
   return false;
 }
 //Función del botón para colocar idioma en inglés.
 document.getElementById("LangSetEnglishButton").onclick = function() {
   //Guardar preferencia de idioma.
   if (typeof(Storage) !== "undefined") { localStorage.setItem("LanguagePref", "English"); }
-  if(currentPage === "index")
-  {
-    location.href = "../en/";
-  } else {
-    location.href = "../en/" + currentPage;
-  }
+  location.href = "../en/" + currentPage;
   return false;
 }
 
