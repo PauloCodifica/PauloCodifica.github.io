@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>PauloCodifica</title>
+<link rel="icon" type="image/x-icon" href="../images/mybrand/PCLogoBlack_160x160.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Estilo CSS de la página -->
+<link rel="stylesheet" href="../css/style_pageDark.css" id="PageStyle">
+<!-- Estilo CSS de la barra de navegación -->
+<link rel="stylesheet" href="../css/style_navbarDark.css" id="NavbarStyle">
+
+<!-- Librería de fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Librería de jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<header>
+  <!-- Logotipo -->
+  <div> <a href="index.html" class="LogoText"><img src="" alt="Logo" class="LogoImage" id="PCLogo_Navbar"> PauloCodifica</a> </div>
+  
+  <!-- Barra de navegación -->
+  <div class="navmenu">
+    <ul class="menu">
+      
+      <!-- Botones de la barra -->
+      <li class="menu-item"><a href="index.html">Home</a></li>
+      <li class="menu-item">
+        <a class="menu-itemdrop" href="#projects">My Projects <i class="fas fa-angle-down"></i></a>
+        <ul class="sub-menu">
+          <li class="sub-item"><a href="games.html">Games</a></li>
+          <li class="sub-item"><a href="software.html">Software</a></li>
+          <li class="sub-item"><a href="websites.html">Websites</a></li>
+          <li class="sub-item"><a href="academicworks.html">Academic homeworks</a></li>
+        </ul>
+      </li>
+      <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+      <li class="menu-item"><a href="about.html">About Me</a></li>
+      <li class="menu-item"><a href="" id="IlluminationButton"><i class="fas fa-adjust"></i> Dark Mode</a></li>
+      <li class="menu-item">
+        <a class="menu-itemdrop" href="#lang">🌎 Language <i class="fas fa-angle-down"></i></a>
+        <ul class="sub-menu">
+          <li class="sub-item"><a href="" id="LangSetSpanishButton"><img src="https://flagcdn.com/w160/mx.png" alt="Latin American Spanish" class="LangFlag"> Spanish</a></li>
+          <li class="sub-item"><a href="" id="LangSetEnglishButton"><img src="https://flagcdn.com/w160/us.png" alt="English" class="LangFlag"> English</a></li>
+        </ul>
+      </li>
+
+      <!-- Botón cerrar menú extensible -->
+      <div class="close-btn"> <i class="fa fa-times fa-2x"></i> </div>
+      
+    </ul>
+  </div>
+  
+  <!-- Botón abrir menú extensible -->
+  <div class="menu-btn"> <i class="fas fa-bars fa-2x"></i> </div>
+  
+</header>
+
+
+<section class="section-slider">
+  <div class="slider">
+    <div class="slide active">
+      <img src="../images/sliderpics/SoftwareDev_Transportes.jpg" alt="Software" id="slideSoftDev">
+      <div class="info">
+        <h2><a href="software.html">Software Development</a></h2>
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+      </div>
+    </div>
+    <div class="slide">
+      <img src="../images/sliderpics/GameDev_Pandemicware.jpg" alt="Videogame" id="slideGameDev">
+      <div class="info">
+        <h2><a href="games.html">Game Development</a></h2>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="../images/WebDevExample2.jpg" alt="Web Site" id="slideWebDev">
+      <div class="info">
+        <h2><a href="websites.html">Web Development</a></h2>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="../images/sliderpics/AcademicWork_Document.jpg" alt="Document" id="slideAcadWork">
+      <div class="info">
+        <h2><a href="academicworks.html">Academic Homeworks</a></h2>
+      </div>
+    </div>
+    <div class="navigation">
+      <i class="fas fa-chevron-left prev-btn"></i>
+      <i class="fas fa-chevron-right next-btn"></i>
+    </div>
+    <div class="navigation-visibility">
+      <div class="slide-icon active"></div>
+      <div class="slide-icon"></div>
+      <div class="slide-icon"></div>
+      <div class="slide-icon"></div>
+    </div>
+  </div>
+</section>
+
+<div class="banner" style="margin: 0px;">
+  <div style="margin: 0px;" class="banner-contenido">                 
+    <h1 align="center" style="margin:0px;"><img src="" style="width: 30%; height: auto;" id="PCLogo_Banner"></h1>
+    <h1 align="center">Exploring the World of Computer Science</h1>
+  </div>
+</div>
+
+<section class="section-description">
+  <p align="center">I am a computer engineering student, a skilled programmer and a technology enthusiast.</p>
+  <p align="center">I love researching and learning how to use tools to create all kinds of IT solutions.</p>
+  <p align="center">I dedicate this space to share with the world my knowledge and experiences of this long learning process.</p>
+  <p align="center">Take a look at my projects! There is a lot to learn 😉</p>
+  <br><br>
+  <p align="center">Here you can find information about:</p>
+</section>
+
+<section class="section-mycontent">
+  <div class="boxbutton">
+    <a href="games.html"><h3 align="center">Game development</h3></a>
+  </div>
+  <div class="mycontentImageDiv" align="center">
+    <img src="../images/GameDevExample1.jpg" alt="Animation process" class="mycontentImage">
+    <img src="../images/GameDevExample2.jpg" alt="Level design" class="mycontentImage">
+  </div>
+  <div class="boxbutton">
+    <a href="software.html"><h3 align="center">Software development</h3></a>
+  </div>
+  <div class="mycontentImageDiv" align="center">
+    <img src="../images/SoftwareDevExample1.jpg" alt="Software code" class="mycontentImage">
+    <img src="../images/SoftwareDevExample2.jpg" alt="Graphic Interface" class="mycontentImage">
+  </div>
+  <div class="boxbutton">
+    <a href="websites.html"><h3 align="center">Web development (Coming soon)</h3></a>
+  </div>
+  <div class="mycontentImageDiv" align="center">
+    <img src="../images/WebDevExample1.jpg" alt="Web code" class="mycontentImage">
+    <img src="../images/WebDevExample2.jpg" alt="Website" class="mycontentImage">
+  </div>
+  <div class="boxbutton">
+    <a href="academicworks.html"><h3 align="center">Academic research papers</h3></a>
+  </div>
+  <div class="mycontentImageDiv" align="center">
+    <img src="../images/AcademicWorksExample1.jpg" alt="Document" class="mycontentImage">
+    <img src="../images/AcademicWorksExample2.png" alt="Diagram" class="mycontentImage">
+  </div>
+</section>
+
+<section class="section-closure">
+  <p align="left">Quote of the day:</p>
+  <div class="quoteDiv" align="left">
+    <p id="dailyQuote"></p>
+  </div>
+</section>
+
+<footer>
+  <img src="" alt="Logo" class="LogoImage" id="PCLogo_Footer">
+  <p id="footercopyright"></p>
+</footer>
+
+<script type="text/javascript" src="../javascript/navbar.js"></script>
+<script type="text/javascript" src="../javascript/slidernavigation.js"></script>
+<script type="text/javascript" src="../javascript/dailyquote.js"></script>
+
+
+</body>
+</html>

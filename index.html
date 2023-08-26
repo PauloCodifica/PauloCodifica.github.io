@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>PauloCodifica</title>
+<link rel="icon" type="image/x-icon" href="images/mybrand/PCLogoBlack_160x160.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<footer>
+  <p id="footercopyright">Bienvenido a PauloCodifica, si estas viendo esta página sucedió un error. Vuelve a ingresar más tarde.</p>
+</footer>
+
+<script type="text/javascript">
+//Guardado de preferencia de idioma por defecto.
+if (localStorage.getItem("LanguagePref") === null) {
+  if(navigator.language.startsWith("es")) {
+    localStorage.setItem("LanguagePref", "Spanish");
+  } else if(navigator.language.startsWith("en")) {
+    localStorage.setItem("LanguagePref", "English");
+  } else {
+    localStorage.setItem("LanguagePref", "Spanish");
+  }
+}
+
+//Chequear preferencia de idioma cuando carga la página y redireccionar.
+if(localStorage.getItem("LanguagePref") === "Spanish") {
+  location.href = "es/index.html";
+} else if(localStorage.getItem("LanguagePref") === "English") {
+  location.href = "en/index.html";
+}
+</script>
+
+
+</body>
+</html>

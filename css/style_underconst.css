@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* Page style*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-WIP {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.589);
+}
+
+.WIPdiv {
+  padding-top: 150px;
+}
+
+.underConstImg {
+  width: 40vh;
+  height: auto;
+}
+
+.WIPdiv h1 {
+  font-size: 2.6em;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+}
+.WIPdiv h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+}

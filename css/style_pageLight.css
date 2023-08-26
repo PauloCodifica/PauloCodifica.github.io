@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* Page style*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner {
+  background-image: url('../images/mybrand/BannerWebLight.png');
+  background-position: center center, center top;
+  background-repeat: repeat, no-repeat;
+  width: 100%;
+  height: 30vh;
+     
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-contenido
+{
+  padding: 10px;
+  color: black;
+  font-family: "Roboto Condensed", sans-serif;
+  word-wrap: break-word;
+}
+
+.section-slider {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #af1010, #1390c2, #1dbdb5, #bacc16);
+  background-size: 300% 300%;
+  animation: color 20s ease-in-out infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes color {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+
+
+
+.slider{
+  position: relative;
+  background-color: #000116;
+  width: 800px;
+  min-height: 500px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  /*transition: 2s;*/
+}
+
+.slider .slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info{
+  position: absolute;
+  color: #222;
+  background-color: rgba(54, 54, 54, 0.589);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  width: fit-content;
+}
+
+.slider .slide .info h2{
+  font-size: 2em;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.slider .slide .info h2 a:link { color: rgb(238, 255, 0); text-decoration: none; }
+.slider .slide .info h2 a:visited { color: rgb(238, 255, 0); text-decoration: none; }
+.slider .slide .info h2 a:hover { color: rgb(238, 255, 0); text-decoration: underline; }
+.slider .slide .info h2 a:active { color: rgb(238, 255, 0); text-decoration: underline; }
+
+.slider .slide .info p{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider:hover .navigation{
+  opacity: 1;
+}
+
+.prev-btn, .next-btn{
+  z-index: 900;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 900;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #4285F4;
+}
+
+@media (max-width: 900px){
+  .slider{
+    width: 100%;
+  }
+
+  .slider .slide .info {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 500px){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
+
+
+
+
+
+.section-description{
+  /*min-height: 40vh;*/
+  background: #1390c2;
+
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  font-size: 1.4em;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  /*font-weight: 500;*/
+}
+
+.section-mycontent{
+  /*min-height: 40vh;*/
+  background-color: #267f96;
+  
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  margin-top: -1px;
+}
+
+.boxbutton {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+
+  width: 340px;
+  height: 100px;
+  background: #b3b3b3;
+  border-radius: 8px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxbutton::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 340px;
+  height: 90px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: center right;
+  animation: animate 6s linear infinite;
+}
+.boxbutton::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 340px;
+  height: 90px;
+  background: linear-gradient(0deg, transparent, transparent, #fcff45, #fcff45, #fcff45);
+  z-index: 1;
+  transform-origin: center right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.boxbutton h3 {
+  position: absolute;
+  inset: 4px;
+  background: rgb(200, 200, 200);
+  padding: 20px 5px;
+  border-radius: 8px;
+  z-index: 2;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.boxbutton h3:hover {
+  background: rgb(235, 235, 235);
+}
+
+.section-mycontent .mycontentImageDiv {
+  background-color: #264e5f;
+  border: 4px solid rgb(75, 75, 75);
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.mycontentImage {
+  width: 45%;
+  height: auto;
+  display: inline-block;
+  padding: 6px;
+}
+@media screen and (max-width: 600px) {
+  .mycontentImage {
+    width: 100%;
+  }
+}
+
+
+.section-closure {
+  /*min-height: 40vh;*/
+  background-color: #1390c2;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  font-size: 1.4em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+
+  margin-top: -1px;
+  /*font-weight: 500;*/
+}
+
+.section-closure p {
+  padding-bottom: 10px;
+}
+.section-closure .quoteDiv {
+  background-color: #15659b;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+}
+
+footer {
+  background-color: #757575;
+  padding: 5px;
+  text-align: center;
+  color:white;
+
+  margin-top: -1px;
+}
