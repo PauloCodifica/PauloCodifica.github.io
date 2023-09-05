@@ -55,6 +55,7 @@ if(localStorage.getItem("IlluminationMode") === "Dark") {
   document.getElementById("PCLogo_Navbar").src="../images/mybrand/PCLogoWhite_160x160.png";
   if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoWhite_160x160.png"; }
   document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoWhite_160x160.png";
+  if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutDark.css"; }
   switch(prefLenguaje)
   {
     case "Spanish":
@@ -70,6 +71,7 @@ if(localStorage.getItem("IlluminationMode") === "Dark") {
   document.getElementById("PCLogo_Navbar").src="../images/mybrand/PCLogoBlack_160x160.png";
   if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoBlack_160x160.png"; }
   document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoBlack_160x160.png";
+  if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutLight.css"; }
   switch(prefLenguaje)
   {
     case "Spanish":
@@ -91,6 +93,7 @@ botonModoIluminacion.onclick = function() {
       document.getElementById("PCLogo_Navbar").src="../images/mybrand/PCLogoBlack_160x160.png";
       if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoBlack_160x160.png"; }
       document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoBlack_160x160.png";
+      if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutLight.css"; }
       switch(prefLenguaje)
       {
         case "Spanish":
@@ -109,6 +112,7 @@ botonModoIluminacion.onclick = function() {
       document.getElementById("PCLogo_Navbar").src="../images/mybrand/PCLogoWhite_160x160.png";
       if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoWhite_160x160.png"; }
       document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoWhite_160x160.png";
+      if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutDark.css"; }
       switch(prefLenguaje)
       {
         case "Spanish":
