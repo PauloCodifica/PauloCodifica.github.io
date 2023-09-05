@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* Page style*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-about {
+  justify-content: center;
+  align-items: center;
+  background-color: #071530;
+}
+
+.aboutdiv {
+  padding-top: 120px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+.circleBorder {
+  width: 36vh;
+  height: auto;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 50%;
+  background-color: #45b5ff;
+  box-shadow: 0 0 5px #3280b4, 0 0 25px #45b5ff, 0 0 50px #45b5ff, 0 0 100px #45b5ff;
+}
+.myPhoto {
+  width: 50vh;
+  height: auto;
+  clip-path: circle();
+  display: block;
+  background-color: blue;
+  margin-left: -19.5%;
+}
+
+.aboutdiv h1 {
+  font-size: 2.6em;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  padding-bottom: 30px;
+}
+.aboutdiv h2 {
+  font-size: 2.4em;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  padding-left: 30px;
+}
+.aboutdiv p {
+  font-size: 1.3em;
+  font-weight: 10;
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(197, 197, 197);
+  padding-left: 10px;
+}
+
+
+
+.section-contact {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #071530;
+
+  margin-top: -1px;
+}
+
+.contactdiv {
+  padding-top: 20px;
+}
+
+.contactdiv h1 {
+  font-size: 2.6em;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+.contactdiv h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+.contactdiv p {
+  font-size: 1.4em;
+  font-weight: 10;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+
+
+.contactFormIframe {
+  width: 100%;
+  height: 860px;
+}
