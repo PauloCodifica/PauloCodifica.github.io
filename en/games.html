@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 <!-- Script de Google Analytics -->
@@ -23,7 +23,7 @@
 <!-- Estilo CSS de la barra de navegación -->
 <link rel="stylesheet" href="../css/style_navbarDark.css" id="NavbarStyle">
 <!-- Estilo CSS específico de Games -->
-<link rel="stylesheet" href="../css/style_underconst.css" id="UnderconstStyle">
+<link rel="stylesheet" href="../css/style_gamesDark.css" id="GamesStyle">
 
 <!-- Librería de fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -75,13 +75,15 @@
   </header>
   
   
-  <section class="section-WIP">
-    <div class="WIPdiv">
-      <h1 align="center" style="margin:0px;"><img src="../images/under_construction.png" alt="Under construction warning" class="underConstImg"></h1>
-      <h1 align="center">¡OOPS!</h1>
-      <h2 align="center">This site is under construction</h2>
-      <h2 align="center">Check back soon</h2>
+  <section class="section-promogames">
+    <div class="promovideo">
+      <iframe src="https://www.youtube.com/embed/zCcU1YIdT9o" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
     </div>
+  </section>
+  
+  <section class="section-mygames">
+    <h1 align="center">My Games</h1>
+    <div id="gameSelectorDiv" class="mygamesdiv"></div>
   </section>
 
 
@@ -92,6 +94,43 @@
 
 <script type="text/javascript" src="../javascript/navbar.js"></script>
 
+<!-- Script para ordenar fichas de mis juegos -->
+<script type="text/javascript">
+  const myGamesDiv = document.getElementById("gameSelectorDiv");
+  // Arreglo que contiene todos los juegos. Contenido: 0-SRC de imagen, 1-ALT de imagen, 2-Titulo, 3-Color de texto, 4-Link direccion.
+  let gamesArray = [
+    ["../images/gamebanners/Wave_Banner.jpg", "Classic Arcade Game", "Wave<br> ", "white", "games/Wave"],  
+    ["../images/gamebanners/Top_Down_Shooter_Banner.jpg","Top Down Shooter Game", "(Unnamed) Top Down Shooter", "white", "games/Unnamed_Top_Down_Shooter"],
+    ["../images/gamebanners/Pandemicware_Banner.jpg", "Platformer Shooting Game", "Pandemicware<br> ", "white", "games/Pandemicware"],
+    ["../images/gamebanners/Platformer_Banner.jpg", "Platformer Game", "(Unnamed) Juego de Plataformas", "white", "games/Unnamed_Platformer"],
+    ["../images/gamebanners/Parallel_Drive_Banner.jpg", "Platformer Shooting Game", "Parallel Drive<br> ", "white", "games/Parallel_Drive"]
+  ];
+
+  gamesArray.forEach(game => {
+    const gameImage = document.createElement('img');
+    gameImage.src = game[0];
+    gameImage.alt = game[1];
+    gameImage.classList.add("gamebannerimg");
+    gameImage.style = "display: none;";
+    const gameTitle = document.createElement('h2');
+    gameTitle.innerHTML = game[2];
+    gameTitle.align = "center";
+    gameTitle.style = `color: ${game[3]}; text-shadow: 0 0 10px black, 0 0 15px rgb(0, 255, 115);`;
+    
+    const gameDiv = document.createElement('div');
+    gameDiv.style = `width: 100%; padding-top: 90%; padding-bottom: 60%; background: url("${gameImage.src}") no-repeat center; background-size: cover; background-color: white;`;
+    gameDiv.classList.add("gamediv");
+    gameDiv.appendChild(gameImage);
+    gameDiv.appendChild(gameTitle);
+    
+    const gameLink = document.createElement('a');
+    gameLink.href = game[4];
+    gameLink.style = "text-decoration: none;";
+    gameLink.appendChild(gameDiv);
+
+    myGamesDiv.appendChild(gameLink);
+  });
+</script>
 
 </body>
 </html>
