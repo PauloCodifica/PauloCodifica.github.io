@@ -56,6 +56,7 @@ if(localStorage.getItem("IlluminationMode") === "Dark") {
   if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoWhite_160x160.png"; }
   document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoWhite_160x160.png";
   if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutDark.css"; }
+  if(document.getElementById("GamesStyle") != null) { document.getElementById("GamesStyle").href="../css/style_gamesDark.css"; }
   switch(prefLenguaje)
   {
     case "Spanish":
@@ -72,6 +73,7 @@ if(localStorage.getItem("IlluminationMode") === "Dark") {
   if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoBlack_160x160.png"; }
   document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoBlack_160x160.png";
   if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutLight.css"; }
+  if(document.getElementById("GamesStyle") != null) { document.getElementById("GamesStyle").href="../css/style_gamesLight.css"; }
   switch(prefLenguaje)
   {
     case "Spanish":
@@ -94,6 +96,7 @@ botonModoIluminacion.onclick = function() {
       if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoBlack_160x160.png"; }
       document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoBlack_160x160.png";
       if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutLight.css"; }
+      if(document.getElementById("GamesStyle") != null) { document.getElementById("GamesStyle").href="../css/style_gamesLight.css"; }
       switch(prefLenguaje)
       {
         case "Spanish":
@@ -113,6 +116,7 @@ botonModoIluminacion.onclick = function() {
       if(document.getElementById("PCLogo_Banner") != null) { document.getElementById("PCLogo_Banner").src="../images/mybrand/PCLogoWhite_160x160.png"; }
       document.getElementById("PCLogo_Footer").src="../images/mybrand/PCLogoWhite_160x160.png";
       if(document.getElementById("AboutStyle") != null) { document.getElementById("AboutStyle").href="../css/style_aboutDark.css"; }
+      if(document.getElementById("GamesStyle") != null) { document.getElementById("GamesStyle").href="../css/style_gamesDark.css"; }
       switch(prefLenguaje)
       {
         case "Spanish":
