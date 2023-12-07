@@ -184,10 +184,10 @@
   // Blobs para la animación principal.
   const animationBoxDiv = document.getElementById("animationBox");
   const blobColors = ["green", "blue", "yellow", "red", "purple", "aqua", "lime", "maroon", "orange", "teal", "fuchsia", "aquamarine", "lightpink", "lightyellow"];
-  const animationXType = [`moveX`, `moveX2`, `moveX`, `moveX2`, `moveX3`, `moveX5`, `moveX6`, `moveX7`, `moveX8`, `moveX9`, `moveX10`, `moveX11`, `moveX12`];
-  const animationYType = [`moveY`, `moveY2`, `moveY2`, `moveY`, `moveY3`, `moveY5`, `moveY6`, `moveY7`, `moveY8`, `moveY9`, `moveY10`, `moveY11`, `moveY12`];
+  const animationXType = [`moveX`, `moveX2`, `moveX3`, `moveX4`, `moveX5`, `moveX6`, `moveX7`, `moveX8`, `moveX9`, `moveX10`, `moveX11`];
+  const animationYType = [`moveY`, `moveY2`, `moveY3`, `moveY4`, `moveY5`, `moveY6`, `moveY7`, `moveY8`, `moveY9`, `moveY10`, `moveY11`];
 
-  for(let i = 0; i < 13; i++) {
+  for(let i = 0; i < 11; i++) {
     const randomColor = blobColors[randomInteger(0, blobColors.length - 1)];
     
     const animBlob = document.createElement('b');
