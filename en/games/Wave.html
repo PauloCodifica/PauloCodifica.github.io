@@ -184,41 +184,41 @@
   // Blobs para la animación principal.
   const animationBoxDiv = document.getElementById("animationBox");
   const blobColors = ["green", "blue", "yellow", "red", "purple", "aqua", "lime", "maroon", "orange", "teal", "fuchsia", "aquamarine", "lightpink", "lightyellow"];
-  const animationXType = [`moveX`, `moveX2`, `moveX3`, `moveX4`, `moveX5`, `moveX6`, `moveX7`, `moveX8`, `moveX9`, `moveX10`, `moveX11`];
-  const animationYType = [`moveY`, `moveY2`, `moveY3`, `moveY4`, `moveY5`, `moveY6`, `moveY7`, `moveY8`, `moveY9`, `moveY10`, `moveY11`];
+  const animationXType = [`moveX`, `moveX2`, `moveX3`, `moveX4`, `moveX5`, `moveX6`, `moveX7`, `moveX8`, `moveX9`];
+  const animationYType = [`moveY`, `moveY2`, `moveY3`, `moveY4`, `moveY5`, `moveY6`, `moveY7`, `moveY8`, `moveY9`];
 
-  for(let i = 0; i < 11; i++) {
+  for(let i = 0; i < 9; i++) {
     const randomColor = blobColors[randomInteger(0, blobColors.length - 1)];
     
     const animBlob = document.createElement('b');
     animBlob.style = `
       background-color: ${randomColor};
       opacity: 0.9;
-      animation: ${animationXType[i]} 3.05s linear 0s infinite alternate, ${animationYType[i]} 3.4s linear 0s infinite alternate;`;
+      animation: ${animationXType[i]} 4.05s linear 0s infinite alternate, ${animationYType[i]} 3.4s linear 0s infinite alternate;`;
 
     const animBlobTail1 = document.createElement('b');
     animBlobTail1.style = `
       background-color: ${randomColor};
       opacity: 0.75;
-      animation: ${animationXType[i]} 3.05s linear 0.03s infinite alternate, ${animationYType[i]} 3.4s linear 0.03s infinite alternate;`;
+      animation: ${animationXType[i]} 4.05s linear 0.03s infinite alternate, ${animationYType[i]} 3.4s linear 0.03s infinite alternate;`;
 
     const animBlobTail2 = document.createElement('b');
     animBlobTail2.style = `
       background-color: ${randomColor};
       opacity: 0.55;
-      animation: ${animationXType[i]} 3.05s linear 0.06s infinite alternate, ${animationYType[i]} 3.4s linear 0.06s infinite alternate;`;
+      animation: ${animationXType[i]} 4.05s linear 0.06s infinite alternate, ${animationYType[i]} 3.4s linear 0.06s infinite alternate;`;
     
     const animBlobTail3 = document.createElement('b');
     animBlobTail3.style = `
       background-color: ${randomColor};
       opacity: 0.35;
-      animation: ${animationXType[i]} 3.05s linear 0.09s infinite alternate, ${animationYType[i]} 3.4s linear 0.09s infinite alternate;`;
+      animation: ${animationXType[i]} 4.05s linear 0.09s infinite alternate, ${animationYType[i]} 3.4s linear 0.09s infinite alternate;`;
 
     const animBlobTail4 = document.createElement('b');
     animBlobTail4.style = `
       background-color: ${randomColor};
       opacity: 0.2;
-      animation: ${animationXType[i]} 3.05s linear 0.12s infinite alternate, ${animationYType[i]} 3.4s linear 0.12s infinite alternate;`;
+      animation: ${animationXType[i]} 4.05s linear 0.12s infinite alternate, ${animationYType[i]} 3.4s linear 0.12s infinite alternate;`;
 
     animationBoxDiv.appendChild(animBlob);
     animationBoxDiv.appendChild(animBlobTail1);
@@ -239,31 +239,31 @@
         animBlob.style = `
           background-color: ${titleBlobColors[i]};
           opacity: 0.9;
-          animation: ${animationXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;`;
+          animation: ${animationXType[i]} 4.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;`;
       
       const animBlobTail1 = document.createElement('b');
         animBlobTail1.style = `
           background-color: ${titleBlobColors[i]};
           opacity: 0.75;
-          animation: ${animationXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;`;
+          animation: ${animationXType[i]} 4.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;`;
 
         const animBlobTail2 = document.createElement('b');
         animBlobTail2.style = `
           background-color: ${titleBlobColors[i]};
           opacity: 0.55;
-          animation: ${animationXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;`;
+          animation: ${animationXType[i]} 4.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;`;
         
         const animBlobTail3 = document.createElement('b');
         animBlobTail3.style = `
           background-color: ${titleBlobColors[i]};
           opacity: 0.35;
-          animation: ${animationXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;`;
+          animation: ${animationXType[i]} 4.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;`;
 
         const animBlobTail4 = document.createElement('b');
         animBlobTail4.style = `
           background-color: ${titleBlobColors[i]};
           opacity: 0.2;
-          animation: ${animationXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;`;
+          animation: ${animationXType[i]} 4.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;`;
     
           item.appendChild(animBlob);
           item.appendChild(animBlobTail1);
