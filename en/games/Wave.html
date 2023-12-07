@@ -24,8 +24,10 @@
 <link rel="stylesheet" href="../css/style_pageDark.css" id="PageStyle">
 <!-- Estilo CSS de la barra de navegación -->
 <link rel="stylesheet" href="../css/style_navbarDark.css" id="NavbarStyle">
+<!-- Estilo CSS del slider -->
+<link rel="stylesheet" href="../css/style_sliderWave.css" id="sliderStyle">
 <!-- Estilo CSS específico de MyGame -->
-<link rel="stylesheet" href="../css/style_underconst.css" id="UnderconstStyle">
+<link rel="stylesheet" href="../css/style_gameWave.css" id="WaveStyle">
 
 <!-- Librería de fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -77,12 +79,93 @@
   </header>
   
   
-  <section class="section-WIP">
-    <div class="WIPdiv">
-      <h1 align="center" style="margin:0px;"><img src="../images/under_construction.png" alt="Under construction warning" class="underConstImg"></h1>
-      <h1 align="center">¡OOPS!</h1>
-      <h2 align="center">This site is under construction</h2>
-      <h2 align="center">Check back soon</h2>
+  <section class="section-gametitle">
+    <div class="animationboxdiv" id="animationBox">
+      <h1 align="center">WAVE</h1>
+      <h3 align="center">PauloCodifica's Version</h3>
+    </div>
+  </section>
+
+  <section class="section-slider">
+    <div class="slider">
+      <div class="slide active">
+        <img src="../images/games/wave/WaveGame_Menu.jpg" alt="Wave Menu">
+      </div>
+      <div class="slide">
+        <img src="../images/games/wave/WaveGame_InGame1.jpg" alt="Wave Game">
+      </div>
+      <div class="slide">
+        <img src="../images/games/wave/WaveGame_Store.jpg" alt="Wave Store">
+      </div>
+      <div class="slide">
+        <img src="../images/games/wave/WaveGame_InGame2.jpg" alt="Wave Game 2">
+      </div>
+      <div class="slide">
+        <img src="../images/games/wave/WaveGame_BossFight.jpg" alt="Wave Boss Fight">
+      </div>
+      <div class="navigation">
+        <i class="fas fa-chevron-left prev-btn"></i>
+        <i class="fas fa-chevron-right next-btn"></i>
+      </div>
+      <div class="navigation-visibility">
+        <div class="slide-icon active"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-descriptiontitle">
+    <div class="waveTitlesDiv" id="waveDescriptionDiv">
+      <h1 align="center">Description</h1>
+    </div>
+  </section>
+  <section class="section-descriptionwave">
+    <p align="center">In WAVE you are a small cube that must avoid attacks from enemy cubes.</p>
+    <p align="center">Move quickly, use your reflexes and dodge the enemies that move across the screen.</p>
+    <p align="center">Resist the waves of enemies, defeat the evil cube boss and... Become the king of WAVE!</p>
+    <br>
+    <p align="center">- The more waves you resist, the more score you get.</p>
+    <p align="center">- You can also use your score in the store to buy upgrades and skins for your cube.</p>
+    <p align="center">- Once you complete the game you will get a special skin.</p>
+    <br>
+    <p align="center">Game originally created by RealTutsGML</p>
+    <p align="center">Visit his YouTube channel: <a href="https://www.youtube.com/@RealTutsGML" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@RealTutsGML</a></p>
+    <p align="center">If you are interested in learning how this game was developed or would like to program a similar one,<br>i recommend you to check out his playlist <a href="https://www.youtube.com/playlist?list=PLWms45O3n--6TvZmtFHaCWRZwEqnz2MHa" target="_blank" rel="noopener noreferrer">"Let's Build a Game in Java"</a></p>
+  </section>
+  
+  <section class="section-systemreqtitle">
+    <div class="waveTitlesDiv" id="waveSystemReqDiv">
+      <h1 align="center">System Requirements</h1>
+    </div>
+  </section>
+  <section class="section-descriptionwave">
+    <p align="center">Operative System: Windows XP, Vista, 7, 8, 8.1, 10 / Mac OS / Linux</p>
+    <p align="center">Processor: Intel Pentium 4 or better</p>
+    <p align="center">Memory: 256mb RAM</p>
+    <p align="center">Graphics: Any</p>
+    <p align="center">Storage: 416 KB</p>
+    <p align="center">Additional: You need to have JAVA installed</p>
+    <br>
+    <p align="center">( PS: Only available in Spanish )</p>
+  </section>
+  
+  <section class="section-downloadtitle">
+    <div class="waveTitlesDiv" id="waveDownloadDiv">
+      <h1 align="center">Download</h1>
+    </div>
+  </section>
+  <section class="section-descriptionwave">
+    <p align="center">You can download this game totally for free from &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/PauloCodifica/Wave">My GitHub Repository <img src="../images/svgs/icons8-github.svg" style="filter: invert();" alt="Github Icon"></a></p>
+    <br>
+    <p align="center">Also includes the source code, written mostly in Spanish.</p>
+    <p align="center">If you want to learn how to code in Java and develop your own video game, i recommend you to take a look at it, it's a good place to start!</p>
+    <br>
+    <br>
+    <div class="wavedownloadbutton">
+      <a href="https://github.com/PauloCodifica/Wave"><h3 align="center">Click here to go to the download link <i class="fa fa-download"></i></h3></a>
     </div>
   </section>
 
@@ -92,8 +175,243 @@
   <p id="footercopyright"></p>
 </footer>
 
+<script type="text/javascript" src="../javascript/slidernavigation.js"></script>
+
 <script type="text/javascript" src="../javascript/navbar.js"></script>
 
+<!-- Script para crear blobs -->
+<script type="text/javascript">
+  const animationBoxDiv = document.getElementById("animationBox");
+  const blobColors = ["green", "blue", "yellow", "red", "purple", "aqua", "lime", "maroon", "orange", "teal", "navy", "fuchsia", "aquamarine", "lightpink", "lightyellow"];
+  const animationXType = [`moveX`, `moveX2`, `moveX`, `moveX2`, `moveX3`, `moveX4`, `moveX3`, `moveX5`, `moveX6`, `moveX7`, `moveX8`, `moveX9`, `moveX10`, `moveX11`, `moveX12`];
+  const animationYType = [`moveY`, `moveY2`, `moveY2`, `moveY`, `moveY3`, `moveY4`, `moveY4`, `moveY5`, `moveY6`, `moveY7`, `moveY8`, `moveY9`, `moveY10`, `moveY11`, `moveY12`];
+
+  for(let i = 0; i < 15; i++) {
+    const randomColor = blobColors[randomInteger(0, blobColors.length - 1)];
+    
+    const animBlob = document.createElement('b');
+    animBlob.style = `
+      background-color: ${randomColor};
+      opacity: 0.9;
+      -webkit-animation: ${animationXType[i]} 3.05s linear 0s infinite alternate, ${animationYType[i]} 3.4s linear 0s infinite alternate;
+      -moz-animation: ${animationXType[i]} 3.05s linear 0s infinite alternate, ${animationYType[i]} 3.4s linear 0s infinite alternate;
+      -o-animation: ${animationXType[i]} 3.05s linear 0s infinite alternate, ${animationYType[i]} 3.4s linear 0s infinite alternate;
+      animation: ${animationXType[i]} 3.05s linear 0s infinite alternate, ${animationYType[i]} 3.4s linear 0s infinite alternate;`;
+
+    const animBlobTail1 = document.createElement('b');
+    animBlobTail1.style = `
+      background-color: ${randomColor};
+      opacity: 0.75;
+      -webkit-animation: ${animationXType[i]} 3.05s linear 0.03s infinite alternate, ${animationYType[i]} 3.4s linear 0.03s infinite alternate;
+      -moz-animation: ${animationXType[i]} 3.05s linear 0.03s infinite alternate, ${animationYType[i]} 3.4s linear 0.03s infinite alternate;
+      -o-animation: ${animationXType[i]} 3.05s linear 0.03s infinite alternate, ${animationYType[i]} 3.4s linear 0.03s infinite alternate;
+      animation: ${animationXType[i]} 3.05s linear 0.03s infinite alternate, ${animationYType[i]} 3.4s linear 0.03s infinite alternate;`;
+
+    const animBlobTail2 = document.createElement('b');
+    animBlobTail2.style = `
+      background-color: ${randomColor};
+      opacity: 0.55;
+      -webkit-animation: ${animationXType[i]} 3.05s linear 0.06s infinite alternate, ${animationYType[i]} 3.4s linear 0.06s infinite alternate;
+      -moz-animation: ${animationXType[i]} 3.05s linear 0.06s infinite alternate, ${animationYType[i]} 3.4s linear 0.06s infinite alternate;
+      -o-animation: ${animationXType[i]} 3.05s linear 0.06s infinite alternate, ${animationYType[i]} 3.4s linear 0.06s infinite alternate;
+      animation: ${animationXType[i]} 3.05s linear 0.06s infinite alternate, ${animationYType[i]} 3.4s linear 0.06s infinite alternate;`;
+    
+    const animBlobTail3 = document.createElement('b');
+    animBlobTail3.style = `
+      background-color: ${randomColor};
+      opacity: 0.35;
+      -webkit-animation: ${animationXType[i]} 3.05s linear 0.09s infinite alternate, ${animationYType[i]} 3.4s linear 0.09s infinite alternate;
+      -moz-animation: ${animationXType[i]} 3.05s linear 0.09s infinite alternate, ${animationYType[i]} 3.4s linear 0.09s infinite alternate;
+      -o-animation: ${animationXType[i]} 3.05s linear 0.09s infinite alternate, ${animationYType[i]} 3.4s linear 0.09s infinite alternate;
+      animation: ${animationXType[i]} 3.05s linear 0.09s infinite alternate, ${animationYType[i]} 3.4s linear 0.09s infinite alternate;`;
+
+    const animBlobTail4 = document.createElement('b');
+    animBlobTail4.style = `
+      background-color: ${randomColor};
+      opacity: 0.2;
+      -webkit-animation: ${animationXType[i]} 3.05s linear 0.12s infinite alternate, ${animationYType[i]} 3.4s linear 0.12s infinite alternate;
+      -moz-animation: ${animationXType[i]} 3.05s linear 0.12s infinite alternate, ${animationYType[i]} 3.4s linear 0.12s infinite alternate;
+      -o-animation: ${animationXType[i]} 3.05s linear 0.12s infinite alternate, ${animationYType[i]} 3.4s linear 0.12s infinite alternate;
+      animation: ${animationXType[i]} 3.05s linear 0.12s infinite alternate, ${animationYType[i]} 3.4s linear 0.12s infinite alternate;`;
+
+    animationBoxDiv.appendChild(animBlob);
+    animationBoxDiv.appendChild(animBlobTail1);
+    animationBoxDiv.appendChild(animBlobTail2);
+    animationBoxDiv.appendChild(animBlobTail3);
+    animationBoxDiv.appendChild(animBlobTail4);
+  }
+
+  // Blobs para título de descripción.
+  const waveDescriptionDiv = document.getElementById("waveDescriptionDiv");
+  const titleAnimXType = [`moveX`, `moveX2`];
+  const titleAnimYType = [`moveYTitle`, `moveYTitle2`];
+  const titleBlobColors = ["red", "aqua"];
+  
+  for(let i = 0; i < 2; i++) {
+    const animBlob = document.createElement('b');
+      animBlob.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.9;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;`;
+    
+    const animBlobTail1 = document.createElement('b');
+      animBlobTail1.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.75;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;`;
+
+      const animBlobTail2 = document.createElement('b');
+      animBlobTail2.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.55;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;`;
+      
+      const animBlobTail3 = document.createElement('b');
+      animBlobTail3.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.35;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;`;
+
+      const animBlobTail4 = document.createElement('b');
+      animBlobTail4.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.2;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;`;
+    
+    waveDescriptionDiv.appendChild(animBlob);
+    waveDescriptionDiv.appendChild(animBlobTail1);
+    waveDescriptionDiv.appendChild(animBlobTail2);
+    waveDescriptionDiv.appendChild(animBlobTail3);
+    waveDescriptionDiv.appendChild(animBlobTail4);
+  }
+
+  // Blobs para título de Requisitos de Sistema.
+  const waveSystemReqDiv = document.getElementById("waveSystemReqDiv");
+
+  for(let i = 0; i < 2; i++) {
+    const animBlob = document.createElement('b');
+      animBlob.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.9;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;`;
+    
+    const animBlobTail1 = document.createElement('b');
+      animBlobTail1.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.75;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;`;
+
+      const animBlobTail2 = document.createElement('b');
+      animBlobTail2.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.55;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;`;
+      
+      const animBlobTail3 = document.createElement('b');
+      animBlobTail3.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.35;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;`;
+
+      const animBlobTail4 = document.createElement('b');
+      animBlobTail4.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.2;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;`;
+    
+    waveSystemReqDiv.appendChild(animBlob);
+    waveSystemReqDiv.appendChild(animBlobTail1);
+    waveSystemReqDiv.appendChild(animBlobTail2);
+    waveSystemReqDiv.appendChild(animBlobTail3);
+    waveSystemReqDiv.appendChild(animBlobTail4);
+  }
+
+  // Blobs para título de Descarga.
+  const waveDownloadDiv = document.getElementById("waveDownloadDiv");
+
+  for(let i = 0; i < 2; i++) {
+    const animBlob = document.createElement('b');
+      animBlob.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.9;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0s infinite alternate;`;
+    
+    const animBlobTail1 = document.createElement('b');
+      animBlobTail1.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.75;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.03s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.03s infinite alternate;`;
+
+      const animBlobTail2 = document.createElement('b');
+      animBlobTail2.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.55;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.06s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.06s infinite alternate;`;
+      
+      const animBlobTail3 = document.createElement('b');
+      animBlobTail3.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.35;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.09s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.09s infinite alternate;`;
+
+      const animBlobTail4 = document.createElement('b');
+      animBlobTail4.style = `
+        background-color: ${titleBlobColors[i]};
+        opacity: 0.2;
+        -webkit-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        -moz-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        -o-animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;
+        animation: ${titleAnimXType[i]} 3.05s linear 0.12s infinite alternate, ${titleAnimYType[i]} 3.4s linear 0.12s infinite alternate;`;
+    
+    waveDownloadDiv.appendChild(animBlob);
+    waveDownloadDiv.appendChild(animBlobTail1);
+    waveDownloadDiv.appendChild(animBlobTail2);
+    waveDownloadDiv.appendChild(animBlobTail3);
+    waveDownloadDiv.appendChild(animBlobTail4);
+  }
+</script>
 
 </body>
 </html>
