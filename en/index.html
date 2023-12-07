@@ -176,6 +176,13 @@
 <script type="text/javascript" src="../javascript/slidernavigation.js"></script>
 <script type="text/javascript" src="../javascript/dailyquote.js"></script>
 
+<script type="text/javascript">
+  // Load random image about software/game development for slider.
+  const slidesSoftwareDev = ["../images/sliderpics/SoftwareDev_Transportes.jpg", "../images/sliderpics/SoftwareDev_TablasDeCifrado.jpg"];
+  document.getElementById('slideSoftDev').src = slidesSoftwareDev[randomInteger(0, slidesSoftwareDev.length - 1)];
+  const slidesGameDev = ["../images/sliderpics/GameDev_Pandemicware.jpg", "../images/sliderpics/GameDev_TopDownRace.jpg", "../images/sliderpics/GameDev_Platformer.jpg", "../images/sliderpics/GameDev_Wave.jpg"];
+  document.getElementById('slideGameDev').src = slidesGameDev[randomInteger(0, slidesGameDev.length - 1)];
+</script>
 
 </body>
 </html>
