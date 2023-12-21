@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* Page style*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('../images/blogs/Print_Hello_Blog.jpg');
+
+  /* Full height */
+  min-height: 310px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.section-blogtitle {
+  padding-top: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.titlediv {
+  padding-top: 80px;
+  width: fit-content;
+  margin: auto;
+}
+
+.titlediv h1 {
+  font-size: clamp(34px, 3.4vw, 106px);
+  font-weight: 40px;
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  background-color: rgba(0, 225, 255, 0.774);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 3px 3px 20px rgb(0, 225, 255);
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-blogbody {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(212, 212, 212);
+
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.section-blogbody .section-bodytitle h2 {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  font-size: clamp(24px, 2.5vw, 68px);
+  padding-bottom: 20px;
+}
+
+.section-blogbody .section-bodytitle p {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(58, 58, 58);
+  font-size: clamp(17px, 1.4vw, 50px);
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+
+.section-bodytableofcontents {
+  padding-bottom: 30px;
+}
+
+.section-bodytableofcontents h2 {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  font-size: clamp(24px, 2.5vw, 68px);
+  padding-bottom: 20px;
+}
+
+.section-bodytableofcontents a {
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(17px, 1.4vw, 50px);
+  line-height: 1.8;
+}
+
+.section-bodytableofcontents a:link { color: rgb(228, 228, 228); text-decoration: none; }
+.section-bodytableofcontents a:visited { color: rgb(228, 228, 228); text-decoration: none; }
+.section-bodytableofcontents a:hover { color: rgb(228, 228, 228); text-decoration: underline; }
+.section-bodytableofcontents a:active { color: rgb(228, 228, 228); text-decoration: underline; }
+
+.tableofcontentdiv {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  padding-right: 50px;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.section-blogbody hr {
+  height: 2px;
+  border-width:0;
+  margin-bottom: 13px;
+  color:rgb(184, 184, 184);
+  background-color: rgb(184, 184, 184);
+  box-shadow: 3px 3px 20px rgb(187, 187, 187);
+}
+
+
+.section-bodychapter1 h2, .section-bodychapter2 h2, .section-bodychapter3 h2, .section-bodychapter4 h2 {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  font-size: clamp(24px, 2.5vw, 68px);
+  padding-bottom: 20px;
+}
+.section-bodychapter1 p, .section-bodychapter2 p, .section-bodychapter3 p, .section-bodychapter4 p {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(58, 58, 58);
+  font-size: clamp(17px, 1.4vw, 50px);
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+
+.section-bodychapter1 a:link, .section-bodychapter2 a:link, .section-bodychapter3 a:link, .section-bodychapter4 a:link { color: rgb(1, 183, 255); text-decoration: underline; }
+.section-bodychapter1 a:visited, .section-bodychapter2 a:visited, .section-bodychapter3 a:visited, .section-bodychapter4 a:visited { color: rgb(1, 183, 255); text-decoration: underline; }
+.section-bodychapter1 a:hover, .section-bodychapter2 a:hover, .section-bodychapter3 a:hover, .section-bodychapter4 a:hover { color: rgb(0, 40, 116); text-decoration: underline; }
+.section-bodychapter1 a:active, .section-bodychapter2 a:active, .section-bodychapter3 a:active, .section-bodychapter4 a:active { color: rgb(0, 40, 116); text-decoration: underline; }
+
+
+.section-blogbody .section-bodyclosure p {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(58, 58, 58);
+  font-size: clamp(17px, 1.4vw, 50px);
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+
+.section-blogsocial, .section-blogrecommendedposts {
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(212, 212, 212);
+
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: -1px;
+}
+
+.section-blogsocial h2, .section-blogrecommendedposts h2 {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  font-size: clamp(18px, 1.4vw, 46px);
+  padding-bottom: 20px;
+}
+
+.recommendedpostsdiv {
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  width: auto;
+}
+
+.postpreviewdiv {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.postpreviewdiv a {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  font-size: clamp(18px, 1.4vw, 46px);
+  font-weight: 600;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.postpreviewdiv a:link { color: whitesmoke; text-decoration: none; }
+.postpreviewdiv a:visited { color: whitesmoke; text-decoration: none; }
+.postpreviewdiv a:hover { color: rgb(0, 40, 116); text-decoration: underline; transition: 0.3s; }
+.postpreviewdiv a:active { color: rgb(0, 40, 116); text-decoration: underline; transition: 0.3s; }
