@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<!-- Script de Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BH2QM4TDF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0BH2QM4TDF');
+</script>
+
+<title>PauloCodifica</title>
+<link rel="icon" type="image/x-icon" href="../images/mybrand/PCLogoBlack_160x160.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Estilo CSS de la página -->
+<link rel="stylesheet" href="../css/style_pageDark.css" id="PageStyle">
+<!-- Estilo CSS de la barra de navegación -->
+<link rel="stylesheet" href="../css/style_navbarDark.css" id="NavbarStyle">
+<!-- Estilo CSS específico de AcademicWorks -->
+<link rel="stylesheet" href="../css/style_academicPapersDark.css" id="AcademicPapersStyle">
+
+<!-- Librería de fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Librería de jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<header id="webHeader"></header>
+
+<section class="section-descriptionAcademicPapers">
+  <div class="generalinfodiv" id="genInfoDiv">
+    <div class="textwrapdiv">
+      <p align="center">Este blog contiene numerosos trabajos académicos de investigación que he realizado a lo largo de mi carrera,<br>aquí podrás explorar una gran variedad de temas esenciales de la informática.<br>¿Qué quieres aprender hoy? 🔍</p>
+    </div>
+  </div>
+</section>
+
+<!-- Publicaciones recientes -->
+<section class="section-recentPosts">
+  <h1 align="center">Publicaciones Recientes</h1>
+  <div class="recentpostsdiv" id="recentPostsDiv"></div>
+</section>
+
+<!-- Todas las entradas -->
+<section class="section-allEntries">
+  <h1>Todas Las Entradas</h1>
+  <div class="searchbardiv">
+    <input type="text" name="searchBar" placeholder="Buscar.." class="searchbarinputtext" id="searchBarInputText">
+    <button type="button" class="searchbarsubmitbutton" id="searchBarSubmitButton"><i class="fa fa-search"></i></button>
+  </div>
+  <p>Utiliza palabras clave. Por ejemplo: Software, IA, Programación, etc.</p>
+  <button type="button" class="returntoallentriesbutton" id="returnToAllEntriesButton" style="display:none;"><i class="fas fa-arrow-left"></i> Volver atrás</button>
+  
+  <div class="searchresultsdiv" id="searchResultsDiv">
+    <table width="100%" height="100%">
+        <tr>
+            <td align="center" valign="middle">
+              <div id="animCargando" style="display:none;"></div>
+            </td>
+        </tr>
+    </table>
+    
+    <div style="display:none;" id="resultEntriesDiv" class="animate-bottom">
+      <h1>Resultados de la búsqueda:</h1>
+      <div class="allentriesdiv" id="searchEntriesDiv"></div>
+      <p id="noSearchResultsMsg" style="display:none;">No se encontraron resultados para tú búsqueda.</p>
+    </div>
+  </div>
+  <div class="allentriesdiv" id="allEntriesDiv">
+  </div>
+</section>
+
+
+<script type="text/javascript" src="../javascript/headerfooter.js"></script>
+
+<script type="text/javascript" src="../javascript/blogpostmanager.js"></script>
+<script type="text/javascript" src="../javascript/blogpostdisplay.js"></script>
+
+
+</body>
+</html>
