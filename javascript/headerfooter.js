@@ -3,25 +3,25 @@ const bodyHeader = document.createElement('template');
 // Contenido de la barra de navegación.
 bodyHeader.innerHTML = `
     <!-- Logotipo -->
-    <div> <a href="index.html" class="LogoText"><img src="" alt="Logo" class="LogoImage" id="PCLogo_Navbar"> PauloCodifica</a> </div>
+    <div> <a href="./" class="LogoText"><img src="" alt="Logo" class="LogoImage" id="PCLogo_Navbar"> PauloCodifica</a> </div>
 
     <!-- Barra de navegación -->
     <div class="navmenu">
     <ul class="menu">
         
         <!-- Botones de la barra -->
-        <li class="menu-item"> <a id="navBarHomeButton" href="index.html">Placeholder</a> </li>
+        <li class="menu-item"> <a id="navBarHomeButton" href="./">Placeholder</a> </li>
         <li class="menu-item">
         <a id="navBarMyProjectsButton" class="menu-itemdrop">Mis Proyectos <i class="fas fa-angle-down"></i></a>
         <ul class="sub-menu">
-            <li class="sub-item"><a id="navBarGamesButton" href="games.html">Juegos</a></li>
-            <li class="sub-item"><a id="navBarSoftwareButton" href="software.html">Programas</a></li>
-            <li class="sub-item"><a id="navBarWebsitesButton" href="websites.html">Sitios Web</a></li>
-            <li class="sub-item"><a id="navBarAcademicPapersButton" href="blog.html">Trabajos Académicos</a></li>
+            <li class="sub-item"><a id="navBarGamesButton" href="./games">Juegos</a></li>
+            <li class="sub-item"><a id="navBarSoftwareButton" href="./software">Programas</a></li>
+            <li class="sub-item"><a id="navBarWebsitesButton" href="./websites">Sitios Web</a></li>
+            <li class="sub-item"><a id="navBarAcademicPapersButton" href="./blog">Trabajos Académicos</a></li>
         </ul>
         </li>
-        <li class="menu-item"><a id="navBarGalleryButton" href="gallery.html">Galería</a></li>
-        <li class="menu-item"><a id="navBarAboutButton" href="about.html">Sobre Mi</a></li>
+        <li class="menu-item"><a id="navBarGalleryButton" href="./gallery">Galería</a></li>
+        <li class="menu-item"><a id="navBarAboutButton" href="./about">Sobre Mi</a></li>
         <li class="menu-item"><a id="navBarIlluminationButton"><i class="fas fa-adjust"></i> Modo Oscuro</a></li>
         <li class="menu-item">
         <a id="navBarLanguageButton" class="menu-itemdrop">🌎 Idioma <i class="fas fa-angle-down"></i></a>
