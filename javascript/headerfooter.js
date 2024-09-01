@@ -60,6 +60,18 @@ document.body.appendChild(bodyFooter.content);
 //  --- FUNCIONALIDADES Y PERSONALIZACIÓN DE LA BARRA DE NAVEGACIÓN Y EL PIE DE PÁGINA ---
 
 
+//Chequeo y guardado de idioma por defecto en caso de que no exista.
+if (localStorage.getItem("LanguagePref") === null) {
+  if(document.documentElement.lang === "es") {
+    localStorage.setItem("LanguagePref", "Spanish");
+  } else if(document.documentElement.lang === "en") {
+    localStorage.setItem("LanguagePref", "English");
+  } else if(document.documentElement.lang != "es" && document.documentElement.lang != "en") {
+    localStorage.setItem("LanguagePref", "Spanish");
+  }
+}
+
+
 //jquery para alternar entre menús
 $(document).ready(function(){
     $(".menu-itemdrop").click(function(){
